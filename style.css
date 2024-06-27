@@ -1,0 +1,228 @@
+/* Responsividade */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Adicionado para melhor responsividade */
+}
+
+/* Alteração da cor do nome da loja para vermelho */
+header h1 {
+    color: #ff1c1c; /* Vermelho */
+    margin: 10px 0; /* Adicionado para espaçamento vertical */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Adicionado para melhor responsividade */
+    justify-content: center; /* Adicionado para centralizar em dispositivos menores */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Adicionando efeito hover aos links da navbar */
+header nav ul li a:hover {
+    color: #ff1c1c; /* Vermelho */
+    text-decoration: none; /* Remove a linha de sublinhado */
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px; /* Adicionado para espaçamento vertical */
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Toggle Switch CSS */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-item {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 10px;
+    }
+}
+
+/* Outros estilos */
+.hero {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.car-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-item img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Seções Esportivas */
+.esportivo {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.esportivo h2 {
+    color: #ff1c1c;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2em;
+}
+
+.esportivo p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px; /* Adiciona espaço para evitar sobreposição com o rodapé */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1c1c1c;
+}
+
+body.dark-mode .car-item {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border-color: #444;
+}
+
+body.dark-mode .car-item img {
+    border-color: #444;
+}
+
+body.dark-mode .hero {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
